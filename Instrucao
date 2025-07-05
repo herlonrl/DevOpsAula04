@@ -1,0 +1,68 @@
+Desafio Imagem Docker
+
+Olá, Avanters, preparados para mais um desafio! 🚀🚀🚀
+
+
+
+O desafio deste módulo, consiste na criação de imagens Docker, na publicação delas no Docker Hub e a subida delas usando o Docker Compose.
+
+
+
+Nós temos uma página chamada "Gerador de Saudações", essa página é um HTML simples que se conecta com dois microsserviços, um responsável por sortear uma saudação de forma aleatória e outro responsável por sortear uma pessoa de forma aleatória.
+
+
+
+A missão de vocês é construir o Dockerfile, fazer o build das imagens e publicar no Docker Hub para as 3 aplicações, a página principal do Gerador e os 2 microsserviços. As instruções estão abaixo:
+
+
+
+Site Gerador de Saudações
+
+Código: https://gitlab.com/avanti-dvp/site-gerador-saudacoes
+
+Instruções: https://gitlab.com/avanti-dvp/site-gerador-saudacoes/-/blob/main/docs/docker.md?ref_type=heads
+
+Microsserviço Pessoas Aleatórias
+
+Código: https://gitlab.com/avanti-dvp/ms-pessoas-aleatorias
+
+Instruções: https://gitlab.com/avanti-dvp/ms-pessoas-aleatorias/-/blob/main/docs/docker.md?ref_type=heads
+
+Microsserviço Saudações Aleatórias
+
+Código: https://gitlab.com/avanti-dvp/ms-saudacoes-aleatorias
+
+Instruções: https://gitlab.com/avanti-dvp/ms-saudacoes-aleatorias/-/blob/main/docs/docker.md?ref_type=heads
+
+
+
+Depois de todas as imagens publicadas no Docker Hub, está na hora de subi-las usando o Docker Compose.
+
+
+
+Vocês podem usar o arquivo de exemplo, que está no materiais complementares anexado aqui no desafio e gravá-lo em um diretório de trabalho de vocês e rodar o comando
+
+sudo docker compose up -d
+
+Lembrando que este comando deve ser rodado na raiz de onde está o arquivo docker-compose.yaml
+
+
+
+O Docker Compose deve baixar as imagens que vocês publicaram no repositório público do usuário de vocês no Docker Hub, durante os passos de construção dos Dockerfiles, por isso removam as imagens locais que vocês construíram durante os passos de geração do Dockerfile.
+
+sudo docker rmi <nome_ou_id_da_imagem>
+
+Se tiver algum contêiner usando a imagem, lembrem de pará-lo e removê-lo
+
+Ou rodem o comando sudo docker system prune -a --volumes
+
+E tirem as crianças da sala 😄 que este comando é altamente destrutivo, ela vai remover qualquer contêiner, imagem, etc que você tenha no Docker
+
+
+A entrega das evidências deve ser feita aqui no Enviar arquivo desta página e as evidências que eu gostaria de receber são:
+
+O código dos 3 Dockerfiles
+O código do docker-compose
+Uma captura de tela da página funcionado
+
+
