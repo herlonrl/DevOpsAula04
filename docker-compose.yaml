@@ -2,7 +2,7 @@ services:
   site:
     image: herlonrl-dockerhub/gerador-saudacoes:1.0
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - ms-pessoas-aleatorias
       - ms-saudacoes-aleatorias

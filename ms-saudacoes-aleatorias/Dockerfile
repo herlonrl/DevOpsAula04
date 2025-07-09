@@ -40,7 +40,7 @@ COPY --from=builder /app/main .
 # A aplicação irá criá-lo quando o contêiner iniciar.
 
 # Expõe a porta que a aplicação usa, conforme definido no main.go.
-EXPOSE 8080
+EXPOSE 8081
 
 # Define o comando que será executado quando o contêiner for iniciado.
 # Este é o ponto de entrada da nossa aplicação.
